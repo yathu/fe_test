@@ -1,14 +1,12 @@
 "use client";
-import Layout from "@/app/layout";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { debounce } from "lodash";
 import { searchCocktail } from "../API/api";
 import { Drink } from "../Interfaces/interfaces";
 import DrinkItem from "../components/drinkItem";
 import Image from "next/image";
 import emptyImg from "@/assets/empty.svg";
-import { Provider, useDispatch, useSelector } from "react-redux";
-import { RootState, store } from "../store/store";
+import { useDispatch } from "react-redux";
 import { addFavourite } from "../store/favouriteSlice";
 
 const Search = () => {

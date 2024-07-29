@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Search from "../search/page";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";

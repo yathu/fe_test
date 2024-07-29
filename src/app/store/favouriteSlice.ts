@@ -14,9 +14,6 @@ export const favouriteSlice = createSlice({
   name: "favourites",
   initialState,
   reducers: {
-    // addFavourite: (state, action: PayloadAction<Drink>) => {
-    //   state.favourites = [...state.favourites, action.payload];
-    // },
     addFavourite: (state, action: PayloadAction<Drink>) => {
       const existingDrink = state.favourites.find(
         (drink) => drink.idDrink === action.payload.idDrink

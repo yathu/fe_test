@@ -1,6 +1,5 @@
 import React, { FC, useCallback } from "react";
 import { Drink } from "../Interfaces/interfaces";
-import Image from "next/image";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 

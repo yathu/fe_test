@@ -1,13 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import Navbar from "./components/navbar";
 import { getRandomData } from "./API/api";
-import { useCallback, useEffect, useState } from "react";
-import { Cocktails, Drink } from "./Interfaces/interfaces";
+import { useEffect, useState } from "react";
+import { Drink } from "./Interfaces/interfaces";
 import DrinkItem from "./components/drinkItem";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "./store/store";
 
 export default function Home() {
   const [randomData, setRandomData] = useState<Drink[]>([]);

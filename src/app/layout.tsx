@@ -3,10 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Navbar from "./components/navbar";
-import { Provider } from "react-redux";
-import { persistor, store } from "./store/store";
 import { Providers } from "./store/StoreProvider";
-import { PersistGate } from "redux-persist/integration/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
