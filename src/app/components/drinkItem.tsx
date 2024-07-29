@@ -34,7 +34,7 @@ const DrinkItem: FC<DrinkItemProps> = React.memo(
           src={strDrinkThumb}
           alt={strImageAttribution}
         />
-        <div className="py-2 px-3">
+        <div className="py-2 px-3 bg-gray-50">
           <div className="text-sm mb-1 line-clamp-1">{strDrink}</div>
           <div className="text-xs text-gray-500">{strCategory}</div>
 
