@@ -29,7 +29,7 @@ This project is a cocktail search and favourites application built with React an
 1. **Run the tests:**
 
     ```bash
-    npm test
+    npm run test
     ```
 
 ## Usage
