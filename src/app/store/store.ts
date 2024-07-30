@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import favouriteReducer from "./favouriteSlice";
-import { persistReducer, persistStore } from "redux-persist";
+import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from "redux-persist";
 import storage from "./stroage";
 
 const persistConfig = {
@@ -13,6 +13,12 @@ const persistedReducer = persistReducer(persistConfig, favouriteReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
 
 export const persistor = persistStore(store);
