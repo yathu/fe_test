@@ -2,6 +2,7 @@ import React, { FC, useCallback } from "react";
 import { Drink } from "../Interfaces/interfaces";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
+import Image from "next/image";
 
 interface DrinkItemProps {
   drink: Drink;
@@ -29,10 +30,14 @@ const DrinkItem: FC<DrinkItemProps> = React.memo(
 
     return (
       <div className="w-full overflow-hidden flex flex-col rounded-lg bg-white shadow">
-        <img
-          className="w-full h-auto"
+        <Image
+          className=""
           src={strDrinkThumb}
           alt={strImageAttribution}
+          sizes="100vw"
+          width={0}
+          height={0}
+          style={{width:'100%', height:'auto'}}
         />
         <div className="py-2 px-3 bg-gray-50">
           <div className="text-sm mb-1 line-clamp-1">{strDrink}</div>
