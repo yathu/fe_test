@@ -25,6 +25,7 @@ export default function Home() {
       <div className="container mx-auto p-4">
         <div className="mb-4 flex justify-end">
           <button
+          data-testid="btnRefresh"
             onClick={() => getHomeData()}
             className="bg-blue-600 px-4 py-1 rounded-full text-white flex flex-row justify-center items-center">
             <span className="text-xs mr-2">Refresh</span>

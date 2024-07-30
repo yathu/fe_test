@@ -3,7 +3,7 @@ import { Cocktails, Drink } from "../Interfaces/interfaces";
 const homeUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/json/v1/1/search.php?f=`;
 const searchUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/json/v1/1/search.php?s=`;
 
-const getFirstLetter = () =>
+export const getFirstLetter = () =>
   String.fromCharCode(97 + Math.floor(Math.random() * 26));
 
 //they don't have any multiple items url so i use search by first letter

@@ -7,7 +7,7 @@ import { removeFavourite } from "../store/favouriteSlice";
 import Image from "next/image";
 import fav from "@/assets/fav.svg";
 
-function Search() {
+function Favourite() {
   const favourites = useSelector((state: RootState) => state.favourites);
 
   const dispatch = useDispatch();
@@ -50,4 +50,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default Favourite;

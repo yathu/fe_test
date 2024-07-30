@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { FC, useCallback, useState } from "react";
 import { debounce } from "lodash";
 import { searchCocktail } from "../API/api";
 import { Drink } from "../Interfaces/interfaces";
@@ -9,7 +9,7 @@ import emptyImg from "@/assets/empty.svg";
 import { useDispatch } from "react-redux";
 import { addFavourite } from "../store/favouriteSlice";
 
-const Search = () => {
+const Search:FC = () => {
   const [searchRes, setSearchRes] = useState<Drink[]>([]);
   const [searchSTR, setSearchSTR] = useState<string>("");
 
