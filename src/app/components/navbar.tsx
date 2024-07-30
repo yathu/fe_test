@@ -17,9 +17,6 @@ const Navbar = () => {
     setOpened(!opened);
   };
 
-  console.log("pathname==>",pathname);
-
-
   return (
     <div className="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
       <div
@@ -54,17 +51,17 @@ const Navbar = () => {
             (opened ? " flex" : " hidden")
           }>
           <a
-            className={`${pathname == '/' && 'bg-gray-200'} px-4 py-2 mt-2 text-sm font-semibold text-gray-900 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline`}
+            className={`${pathname == '/' && 'bg-gray-200'} nav-item`}
             href="/">
             Home
           </a>
           <Link
-            className={`${pathname == '/search' && 'bg-gray-200'} px-4 py-2 mt-2 text-sm font-semibold  rounded-lg dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline`}
+            className={`${pathname == '/search' && 'bg-gray-200'} nav-item`}
             href="/search">
             Search
           </Link>
           <Link
-            className={`${pathname == '/favourites' && 'bg-gray-200'} px-4 py-2 mt-2 text-sm font-semibold rounded-lg dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline`}
+            className={`${pathname == '/favourites' && 'bg-gray-200'} nav-item`}
             href="/favourites">
             Favourits
             {favourites?.length > 0 && (

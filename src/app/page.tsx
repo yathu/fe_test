@@ -27,7 +27,7 @@ export default function Home() {
           <button
           data-testid="btnRefresh"
             onClick={() => getHomeData()}
-            className="bg-blue-600 px-4 py-1 rounded-full text-white flex flex-row justify-center items-center">
+            className="refresh-btn">
             <span className="text-xs mr-2">Refresh</span>
             <i className="bi bi-arrow-clockwise"></i>
           </button>

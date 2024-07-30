@@ -46,7 +46,7 @@ const DrinkItem: FC<DrinkItemProps> = React.memo(
           {isSearched && (
             <button
               onClick={() => onAdd && onAdd(drink)}
-              className="mt-3 mb-1 bg-blue-600 px-4 py-1 rounded text-white flex flex-row justify-center items-center w-full">
+              className="btn-add">
               <i className={`bi ${isFav() ? 'bi-heart-fill text-blue-200' : 'bi-heart'} mr-2`}></i>
               <span className="text-xs mr-2">Add</span>
             </button>
@@ -55,7 +55,7 @@ const DrinkItem: FC<DrinkItemProps> = React.memo(
           {onRemove && (
             <button
               onClick={() => onRemove && onRemove(idDrink)}
-              className="mt-3 mb-1 bg-red-400 px-4 py-1 rounded text-white flex flex-row justify-center items-center w-full outline-none focus:bg-red-600">
+              className="btn-remove">
               <i
                 className={`bi bi-trash3-fill mr-2`}></i>
               <span className="text-xs mr-2">Remove </span>
